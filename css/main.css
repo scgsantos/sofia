@@ -1,39 +1,116 @@
-body {
-  font: 15px Helvetica, sans-serif;
-  color: #000;
-  background: #fff;
-  margin: 4vh 3vw;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 1.2em;
-  font-weight: 300;
+
+html {
+  font: 16px Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
-body header a {
+
+a {
   text-decoration: none;
   color: #000;
 }
-body header h1 {
-  display: inline-block;
-  font-size: 3em;
-  margin: 0;
-  line-height: 1em;
-}
-body header nav {
-  overflow: hidden;
-}
-body header nav ul {
+
+ul {
   list-style: none;
-  margin: 0;
 }
-body header nav ul li {
-  display: inline-block;
-  margin-left: 3em;
+
+body {
+  color: #000;
+  background: #F4F0F0;
+  margin: 4vh 3vw;
+  display: flex;
+  justify-content: space-between;
 }
-body header nav ul li a:hover {
+body header {
+  font-weight: 400;
+}
+body nav {
+  margin-top: 14rem;
+  font-size: 1.2rem;
+  position: fixed;
+}
+body nav li {
+  margin-bottom: 2.5rem;
+}
+body nav li a:hover {
   text-decoration: underline;
+}
+body h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+body h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+body h3 {
+  font-weight: 300;
+  font-size: 2.2rem;
+}
+body h4 {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+body p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 2.1rem;
+}
+body strong {
+  font-weight: 400;
+}
+body section {
+  width: 55vw;
+  margin-top: 9rem;
+}
+body .link {
+  text-decoration: underline;
+}
+body .content {
+  width: 53vw;
+}
+body .content section p {
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+body .content section h2 {
+  margin-bottom: 4rem;
+}
+body .content #intro h4 {
+  margin-top: 3.5rem;
+}
+body .content #about {
+  width: 75%;
+}
+body .content #projects {
+  width: 100%;
+}
+body .content #projects .project {
+  display: flex;
+  justify-content: space-between;
+}
+body .content #projects .project img {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+}
+body .content #projects .project .project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .content #projects .project p {
+  flex-grow: 2;
+}
+body .content #projects .project .project-roles p {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

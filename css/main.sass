@@ -1,39 +1,115 @@
 $font-stack: Helvetica, sans-serif
 $primary-color: #000
+$bg-color: #F4F0F0
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font: 16px $font-stack
+    scroll-behavior: smooth
+
+a
+    text-decoration: none
+    color: $primary-color
+
+ul
+    list-style: none
 
 body
-    font: 15px $font-stack
     color: $primary-color
-    background: #fff
+    background: $bg-color
     margin: 4vh 3vw
+    display: flex
+    justify-content: space-between
 
     header
-        display: flex
-        justify-content: space-between
-        align-items: flex-start
-        font-size: 1.2em
+        font-weight: 400
+
+    nav
+        margin-top: 14rem
+        font-size: 1.2rem
+        position: fixed
+
+        li
+            margin-bottom: 2.5rem
+
+            a:hover
+                text-decoration: underline
+
+    h1
+        font-size: 3.5rem
+        font-weight: 700
+        line-height: 4rem
+
+    h2
+        font-weight: 400
+        font-size: 2.5rem
+
+    h3
         font-weight: 300
+        font-size: 2.2rem
 
-        a
-            text-decoration: none
-            color: $primary-color
+    h4
+        font-weight: 300
+        font-size: 1.6rem
 
-        h1
-            display: inline-block
-            font-size: 3em
-            margin: 0
-            line-height: 1em
+    p
+        font-weight: 300
+        font-size: 1.1rem
+        line-height: 2.1rem
 
-        nav
-            overflow: hidden
+    strong
+        font-weight: 400
 
-            ul
-                list-style: none
-                margin: 0
+    section
+        width: 55vw
+        margin-top: 9rem
 
-                li
-                    display: inline-block
-                    margin-left: 3em
+    .link
+        text-decoration: underline
 
-                    a:hover
-                        text-decoration: underline
+    .content
+        width: 53vw
+        section
+            p
+                text-align: justify
+                margin-bottom: 2rem
+
+            h2
+                margin-bottom: 4rem
+
+        #intro
+            h4
+                margin-top: 3.5rem
+
+        #about
+            width: 75%
+
+        #projects
+            width: 100%
+
+            .project
+                display: flex
+                justify-content: space-between
+
+                img
+                    width: 60%
+                    max-width: 100%
+                    height: auto
+
+                .project-info
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+
+                p
+                    flex-grow: 2
+
+                .project-roles
+                    p
+                        font-size: 0.9rem
+                        margin: 0
+                        line-height: 1.2rem
