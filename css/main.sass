@@ -56,23 +56,23 @@ body
         font-weight: 300
         font-size: 1.6rem
 
-    p
+    p, span
         font-weight: 300
         font-size: 1.1rem
         line-height: 2.1rem
 
-    strong
+    strong, .label
         font-weight: 400
 
     section
-        width: 55vw
         margin-top: 9rem
+        margin-bottom: 30vh
 
     .link
         text-decoration: underline
 
     .content
-        width: 53vw
+        width: 57vw
         section
             p
                 text-align: justify
@@ -82,11 +82,13 @@ body
                 margin-bottom: 4rem
 
         #intro
+            margin-bottom: 70vh
+
             h4
                 margin-top: 3.5rem
 
-        #about
-            width: 75%
+        #about, #contact
+            width: 70%
 
         #projects
             width: 100%
@@ -94,6 +96,7 @@ body
             .project
                 display: flex
                 justify-content: space-between
+                margin-bottom: 8rem
 
                 img
                     width: 60%
@@ -101,15 +104,42 @@ body
                     height: auto
 
                 .project-info
+                    width: 35%
                     display: flex
                     flex-direction: column
                     justify-content: space-between
 
-                p
-                    flex-grow: 2
+                    .p-link
+                        margin: 0
 
                 .project-roles
+                    flex-grow: 3
+
                     p
                         font-size: 0.9rem
                         margin: 0
                         line-height: 1.2rem
+
+        #contact
+            .contacts
+                p
+                    margin: 0
+
+                    a
+                        margin-left: 0.7rem
+                        font-size: 0.9rem
+
+                p:hover
+                    a
+                        text-decoration: underline
+
+                p:hover .label:after
+                    content: attr(after)
+
+                .label:after
+                    content: attr(before)
+
+            .socials
+                margin-top: 2rem
+                p
+                    margin: 0
