@@ -9,7 +9,6 @@ $bg-color: #F4F0F0
 
 html
     font: 16px $font-stack
-    scroll-behavior: smooth
 
 a
     text-decoration: none
@@ -21,23 +20,40 @@ ul
 body
     color: $primary-color
     background: $bg-color
-    margin: 4vh 3vw
     display: flex
     justify-content: space-between
+    height: 100vh
+
+    #expandable
+        width: 100vw
+        height: 100vh
+        text-align: center
+        position: fixed
+        font-size: 5vw
+        transform-origin: center top
 
     header
         font-weight: 400
+        padding: 4vh 0 4vh 3vw
 
-    nav
-        margin-top: 14rem
-        font-size: 1.2rem
-        position: fixed
+        nav
+            margin-top: 13rem
+            font-size: 0.7rem
 
-        li
-            margin-bottom: 2.5rem
+            li
+                margin-bottom: 2.5rem
 
-            a:hover
-                text-decoration: underline
+                .label
+                    font-size: 1.1rem
+
+                a:hover
+                    text-decoration: underline
+
+                a:hover .label:after
+                    content: attr(after)
+
+                .label:after
+                    content: attr(before)
 
     h1
         font-size: 3.5rem
@@ -72,7 +88,11 @@ body
         text-decoration: underline
 
     .content
-        width: 57vw
+        width: 60vw
+        padding: 4vh 3vw 4vh 0
+        overflow: auto
+        scroll-behavior: smooth
+
         section
             p
                 text-align: justify
@@ -89,9 +109,11 @@ body
 
         #about, #contact
             width: 70%
+            padding-top: 8rem
 
         #projects
             width: 100%
+            padding-top: 8rem
 
             .project
                 display: flex

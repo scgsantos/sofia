@@ -6,7 +6,6 @@
 
 html {
   font: 16px Helvetica, sans-serif;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -21,23 +20,40 @@ ul {
 body {
   color: #000;
   background: #F4F0F0;
-  margin: 4vh 3vw;
   display: flex;
   justify-content: space-between;
+  height: 100vh;
+}
+body #expandable {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  position: fixed;
+  font-size: 5vw;
+  transform-origin: center top;
 }
 body header {
   font-weight: 400;
+  padding: 4vh 0 4vh 3vw;
 }
-body nav {
-  margin-top: 14rem;
-  font-size: 1.2rem;
-  position: fixed;
+body header nav {
+  margin-top: 13rem;
+  font-size: 0.7rem;
 }
-body nav li {
+body header nav li {
   margin-bottom: 2.5rem;
 }
-body nav li a:hover {
+body header nav li .label {
+  font-size: 1.1rem;
+}
+body header nav li a:hover {
   text-decoration: underline;
+}
+body header nav li a:hover .label:after {
+  content: attr(after);
+}
+body header nav li .label:after {
+  content: attr(before);
 }
 body h1 {
   font-size: 3.5rem;
@@ -72,7 +88,10 @@ body .link {
   text-decoration: underline;
 }
 body .content {
-  width: 57vw;
+  width: 60vw;
+  padding: 4vh 3vw 4vh 0;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 body .content section p {
   text-align: justify;
@@ -89,9 +108,11 @@ body .content #intro h4 {
 }
 body .content #about, body .content #contact {
   width: 70%;
+  padding-top: 8rem;
 }
 body .content #projects {
   width: 100%;
+  padding-top: 8rem;
 }
 body .content #projects .project {
   display: flex;
