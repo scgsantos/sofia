@@ -42,18 +42,29 @@ body
 
             li
                 margin-bottom: 2.5rem
+                width: fit-content
 
-                .label
+                a
                     font-size: 1.1rem
+                    padding: 0.5rem 0
 
-                a:hover
-                    text-decoration: underline
+                a:before
+                    content: '_'
 
-                a:hover .label:after
-                    content: attr(after)
+                a:hover:before, a:active
+                    content: ''
 
-                .label:after
-                    content: attr(before)
+                a:after
+                    content: ''
+                    width: 0px
+                    height: 1px
+                    display: block
+                    background: black
+                    margin-top: -0.17rem
+                    transition: 400ms
+
+                a:hover:after, a:active
+                    width: 100%
 
     h1
         font-size: 3.5rem

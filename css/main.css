@@ -42,18 +42,29 @@ body header nav {
 }
 body header nav li {
   margin-bottom: 2.5rem;
+  width: fit-content;
 }
-body header nav li .label {
+body header nav li a {
   font-size: 1.1rem;
+  padding: 0.5rem 0;
 }
-body header nav li a:hover {
-  text-decoration: underline;
+body header nav li a:before {
+  content: "_";
 }
-body header nav li a:hover .label:after {
-  content: attr(after);
+body header nav li a:hover:before, body header nav li a:active {
+  content: "";
 }
-body header nav li .label:after {
-  content: attr(before);
+body header nav li a:after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: black;
+  margin-top: -0.17rem;
+  transition: 400ms;
+}
+body header nav li a:hover:after, body header nav li a:active {
+  width: 100%;
 }
 body h1 {
   font-size: 3.5rem;
