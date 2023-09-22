@@ -24,14 +24,6 @@ body {
   justify-content: space-between;
   height: 100vh;
 }
-body #expandable {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  position: fixed;
-  font-size: 5vw;
-  transform-origin: center top;
-}
 body header {
   font-weight: 400;
   padding: 4vh 0 4vh 3vw;
@@ -51,7 +43,7 @@ body header nav li a {
 body header nav li a:before {
   content: "_";
 }
-body header nav li a:hover:before, body header nav li a:active {
+body header nav li a:hover:before {
   content: "";
 }
 body header nav li a:after {
@@ -63,13 +55,31 @@ body header nav li a:after {
   margin-top: -0.17rem;
   transition: 400ms;
 }
-body header nav li a:hover:after, body header nav li a:active {
+body header nav li a:hover:after {
   width: 100%;
+}
+body header nav li:nth-child(1) {
+  animation: slideRight ease 1s forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+body header nav li:nth-child(2) {
+  animation: slideRight ease 1s forwards;
+  animation-delay: 3.1s;
+  opacity: 0;
+}
+body header nav li:nth-child(3) {
+  animation: slideRight ease 1s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
 }
 body h1 {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 4rem;
+  animation: slideRight ease 1s forwards;
+  animation-delay: 0s;
+  opacity: 0;
 }
 body h2 {
   font-weight: 400;
@@ -96,13 +106,35 @@ body section {
   margin-bottom: 30vh;
 }
 body .link {
-  text-decoration: underline;
+  width: fit-content;
+  display: block;
+}
+body .link:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: black;
+  margin-top: -0.6rem;
+  transition: 400ms;
+}
+body .link:hover:after {
+  width: 0px;
 }
 body .content {
   width: 60vw;
   padding: 4vh 3vw 4vh 0;
   overflow: auto;
   scroll-behavior: smooth;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 body .content section p {
   text-align: justify;
@@ -114,16 +146,24 @@ body .content section h2 {
 body .content #intro {
   margin-bottom: 70vh;
 }
+body .content #intro h3 {
+  animation: slideRight ease 1s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
 body .content #intro h4 {
   margin-top: 3.5rem;
+  animation: slideRight ease 1s forwards;
+  animation-delay: 2s;
+  opacity: 0;
 }
 body .content #about, body .content #contact {
   width: 70%;
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
 body .content #projects {
   width: 100%;
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
 body .content #projects .project {
   display: flex;
@@ -152,21 +192,35 @@ body .content #projects .project .project-roles p {
   margin: 0;
   line-height: 1.2rem;
 }
+body .content #contact .contacts p:hover:before {
+  content: "";
+}
+body .content #contact .contacts p:before {
+  content: "_";
+}
 body .content #contact .contacts p {
   margin: 0;
+  width: fit-content;
+  pointer-events: none;
 }
 body .content #contact .contacts p a {
   margin-left: 0.7rem;
   font-size: 0.9rem;
+  width: fit-content;
+  display: inline-block;
+  pointer-events: auto;
 }
-body .content #contact .contacts p:hover a {
-  text-decoration: underline;
+body .content #contact .contacts p a:after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: black;
+  margin-top: -0.7rem;
+  transition: 400ms;
 }
-body .content #contact .contacts p:hover .label:after {
-  content: attr(after);
-}
-body .content #contact .contacts .label:after {
-  content: attr(before);
+body .content #contact .contacts p a:hover:after {
+  width: 100%;
 }
 body .content #contact .socials {
   margin-top: 2rem;

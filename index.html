@@ -5,15 +5,17 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>This is my portfolio</title>
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css"/>
+
 	</head>
 	<body>
         <header>
             <h1><a href="">Hello,<br>I'm Sofia</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li class="one"><a href="#about">about</a></li>
+                    <li class="two"><a href="#projects">projects</a></li>
+                    <li class="three"><a href="#contact">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -84,8 +86,8 @@
                 <h2>contact</h2>
                 <p>Feel free to reach out about a project, collaboration or just to say hello. Thanks for passing by!</p>
                 <div class="contacts">
-                    <p><span class="label" before="_email" after="email"></span><a href="mailto:soficgs@gmail.com">soficgs@gmail.com</a></p>
-                    <p><span class="label" before="_phone" after="phone"></span><a href="tel:+351915134932">+351 915 134 932</a></p>
+                    <p class="parent">email<a class="child" href="mailto:soficgs@gmail.com">soficgs@gmail.com</a></p>
+                    <p class="parent">phone<a class="child" href="tel:+351915134932">+351 915 134 932</a></p>
                 </div>
                 <div class="socials">
                     <p><a class="link" href="https://www.linkedin.com/in/scgsantos">LinkedIn <span style="font: 1.5rem Montserrat, sans-serif; font-weight: 200;">&#8599;</span></a></p>
@@ -95,5 +97,6 @@
             </section>
         </div>  
         <script src="script.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
     </body>
 </html>
