@@ -1,13 +1,3 @@
-/*
-$(function () {
-  $(window).scroll(function () {
-    var mass = Math.min(20, 1 + 0.005 * $(this).scrollTop());
-
-    $("#expandable").css("transform", "scale(" + mass + ")");
-  });
-});
-*/
-
 const hello = document.querySelector("header h1");
 const contentBox = document.querySelector(".content");
 const introBox = document.querySelector("#about");
