@@ -102,7 +102,6 @@ body strong, body .label {
   font-weight: 400;
 }
 body section {
-  margin-top: 9rem;
   margin-bottom: 30vh;
 }
 body .link {
@@ -144,15 +143,19 @@ body .content section h2 {
   margin-bottom: 4rem;
 }
 body .content #intro {
+  margin-top: 9rem;
   margin-bottom: 70vh;
 }
-body .content #intro h3 {
+body .content #intro h1 {
+  width: 27rem;
+  font-weight: 200;
   animation: slideRight ease 1s forwards;
   animation-delay: 1s;
   opacity: 0;
 }
-body .content #intro h4 {
-  margin-top: 3.5rem;
+body .content #intro h2 {
+  font-weight: 200;
+  margin: 3.5rem 0 0 10rem;
   animation: slideRight ease 1s forwards;
   animation-delay: 2s;
   opacity: 0;
